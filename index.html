@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Attendance Manager - Sistema de Asistencias</title>
+
+  <!-- CSS principal -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+</head>
+
+
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-content">
+            <img src="images/logo.png" alt="Logo Attendance Manager" class="logo">
+            <div class="titles">
+                <h1>Attendance Manager</h1>
+                <p class="subtitle">Registro y gestión de asistencias — Demo local</p>
+            </div>
+        </div>
+    </header>
+
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="container">
+
+        <!-- Registrar empleado -->
+        <section class="panel">
+            <h2>Registrar empleado</h2>
+            <form id="employeeForm" class="form-inline">
+                <input id="empName" placeholder="Nombre completo" required />
+                <input id="empId" placeholder="Documento / ID" required />
+                <button type="submit" class="btn-primary">Agregar empleado</button>
+            </form>
+        </section>
+
+        <!-- Marcar asistencia -->
+        <section class="panel">
+            <h2>Marcar asistencia</h2>
+            <div class="mark-row">
+                <select id="selectEmployee">
+                    <option value="">-- Seleccione empleado --</option>
+                </select>
+                <button id="markEntry" class="btn-primary">Marcar entrada</button>
+                <button id="markExit" class="btn-secondary">Marcar salida</button>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="panel">
+            <h2>Filtros y Acciones</h2>
+            <div class="filters">
+                <input id="searchInput" placeholder="Buscar por nombre o ID" />
+                <label for="dateFrom">Desde</label>
+                <input id="dateFrom" type="date" />
+                <label for="dateTo">Hasta</label>
+                <input id="dateTo" type="date" />
+                <button id="btnFilter" class="btn-primary">Aplicar filtros</button>
+                <button id="btnClearFilter" class="btn-tertiary">Limpiar</button>
+                <button id="btnExport" class="btn-success">Exportar CSV</button>
+                <button id="btnSeed" class="btn-tertiary">Cargar ejemplo</button>
+            </div>
+        </section>
+
+        <!-- Lista -->
+        <section class="panel">
+            <h2>Lista de asistencias</h2>
+            <div class="table-wrap">
+                <table id="attendanceTable">
+                    <thead>
+                        <tr>
+                            <th>Fecha / Hora</th>
+                            <th>ID</th>
+                            <th>Empleado</th>
+                            <th>Tipo</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <p>2025 Guillermo Vásquez</p>
+
+        <div class="footer-links">
+            <a href="mailto:guillermovasbendev@gmail.com">
+                <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" class="icono-red" />
+                Correo
+            </a>
+
+            <a href="https://www.linkedin.com/in/guillermovasbendev/" target="_blank" rel="noopener">
+                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn" class="icono-red" />
+                LinkedIn
+            </a>
+        </div>
+
+        <small>Proyecto demo — Guardado local (LocalStorage). Diseñado para demostrar funcionalidad CRUD, filtros y exportación.</small>
+    </footer>
+
+
+
+    <!-- Scripts principales -->
+    <script src="db.js"></script>
+    <script src="utils.js"></script>
+    <script src="app.js"></script>
+
+    <!-- notificacion visual no intrusiva -->
+    <div id="toast-container"></div> 
+
+</body>
+</html>
