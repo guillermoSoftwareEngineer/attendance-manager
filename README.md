@@ -24,11 +24,11 @@ El proyecto está orientado a mostrar dominio en:
 
 ## 2. Tecnologías utilizadas
 
-- **HTML5**
-- **CSS3**
-- **JavaScript (Vanilla JS)**
-- **LocalStorage API**
-- **CSV Export (Blob + URL.createObjectURL)**
+- HTML5  
+- CSS3  
+- JavaScript (Vanilla JS)  
+- LocalStorage API  
+- CSV Export (Blob + URL.createObjectURL)
 
 ---
 
@@ -49,7 +49,7 @@ El proyecto está orientado a mostrar dominio en:
 
 ### Filtrado avanzado
 - Búsqueda por nombre o ID.
-- Filtros por rango de fechas.
+- Filtros por rango de fechas (Desde / Hasta).
 - Limpieza rápida de filtros.
 
 ### Exportación
@@ -62,83 +62,80 @@ El proyecto está orientado a mostrar dominio en:
 - Tabla con scroll horizontal inteligente.
 
 ### Arquitectura modular
-- `index.html`: estructura y vínculos del proyecto.
-- `styles.css`: diseño, variables CSS y sistema responsivo.
-- `db.js`: persistencia y manejo de “base de datos” local.
-- `utils.js`: funciones auxiliares (CSV, fechas, filtros, toasts).
-- `app.js`: lógica principal del proyecto.
+- index.html: estructura y vínculos del proyecto.
+- styles.css: diseño, variables CSS y sistema responsivo.
+- db.js: persistencia y manejo de “base de datos” local.
+- utils.js: funciones auxiliares (CSV, fechas, filtros, toasts).
+- app.js: lógica principal del proyecto.
 
 ---
 
 ## 4. Estructura del proyecto
 
-```
-/project-root
-│
-├── index.html
-├── styles.css
-├── db.js
-├── utils.js
-├── app.js
-└── images/
-       ├── logo.png
-       └── favicon.png
-```
+AsistenciasCRUD/  
+│  
+├── index.html  
+├── styles.css  
+├── db.js  
+├── utils.js  
+├── app.js  
+├── README.md  
+└── images/  
+  ├── logo.png  
+  ├── favicon.png  
+  ├── correo.png  
+  ├── captura1.jpg  
+  └── captura2.jpg  
 
 ---
 
 ## 5. Ejecución del proyecto
 
 No requiere instalación ni dependencias externas.  
-Solo abre el archivo `index.html` en el navegador.
+Solo abre el archivo index.html en el navegador.
 
 ---
 
 ## 6. Comandos útiles (solo si usas servidor local)
 
-Iniciar servidor local con Node:
-```
-npx http-server
-```
+npx http-server  
 
-Iniciar servidor local con Python:
-```
-python -m http.server 8080
-```
+python -m http.server 8080  
 
 ---
 
 ## 7. Funcionalidades técnicas (detalle)
 
 ### Persistencia (db.js)
-- `load()` carga la base de datos desde LocalStorage.
-- `save()` guarda cualquier cambio.
-- `seedExample()` genera datos de prueba.
-- `createId()` genera identificadores únicos.
-- La base se almacena bajo la clave `attendance_db_v1`.
+- load() carga la base de datos desde LocalStorage.
+- save() guarda cualquier cambio.
+- seedExample() genera datos de prueba.
+- createId() genera identificadores únicos.
+- La base se almacena bajo la clave attendance_db_v1.
 
 ### Utilidades (utils.js)
-- `formatDateTime(iso)` convierte timestamps en fechas legibles.
-- `filterByDateRange()` filtra registros por fecha.
-- `exportToCSV()` crea un archivo .csv descargable.
-- `toast()` genera notificaciones no intrusivas.
+- formatDateTime(iso) convierte timestamps en fechas legibles.
+- filterByDateRange() filtra registros por fecha.
+- exportToCSV() crea un archivo .csv descargable.
+- toast() genera notificaciones visuales no intrusivas.
 
 ### Lógica principal (app.js)
 - Manejo del DOM.
 - Registro de empleados.
-- Registro de entradas/salidas.
+- Registro de entradas y salidas.
 - Filtrado, limpieza y exportación.
 - Render dinámico de la tabla.
-- Integración completa con `DB` y `Utils`.
+- Integración completa con DB y Utils.
 
 ---
 
-## 8. Capturas (opcional)
-Puedes agregar imágenes como esta estructura:
+## 8. Capturas del sistema
 
-```
-![Screenshot](./images/captura1.png)
-```
+Vista general y registro de empleados  
+![image alt](https://github.com/guillermoSoftwareEngineer/attendance-manager/blob/a5a7e0951155be5b8c80b33f57b09014750233df/images/captura1.jpg)
+
+Filtros, exportación y lista de asistencias  
+![image alt](https://github.com/guillermoSoftwareEngineer/attendance-manager/blob/a5a7e0951155be5b8c80b33f57b09014750233df/images/captura2.jpg)
 
 ---
 
@@ -155,9 +152,7 @@ Puedes agregar imágenes como esta estructura:
 
 ## 10. Autor
 
-**Guillermo Vásquez Benítez**  
+Guillermo Vásquez Benítez  
 Desarrollador Front-End — Ingeniería de Software  
-Correo: `guillermovasbendev@gmail.com`  
+Correo: guillermovasbendev@gmail.com  
 LinkedIn: https://www.linkedin.com/in/guillermovasbendev/
-
----
